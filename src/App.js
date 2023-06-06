@@ -21,9 +21,13 @@ function App() {
       <TodoSearch />
       
       <TodoList>
-        <TodoItem />
-        <TodoItem />
-        <TodoItem />
+        {defaultTodos.map(todo => (
+          <TodoItem 
+            key={todo.text} 
+            text={todo.text} 
+            completed={todo.Completed} 
+          />
+        ))}
       </TodoList>
       
       <CreateTodoButton />
