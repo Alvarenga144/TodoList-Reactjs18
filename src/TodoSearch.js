@@ -3,7 +3,7 @@ import './TodoSearch.css';
 function TodoSearch() {
     return(
         <input
-            placeholder="Hacer Ejercicio"
+            placeholder="Agregar tarea"
             className="TodoSearch"
         />
     );
