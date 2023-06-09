@@ -28,6 +28,7 @@
 
 .TodoItem-p--complete {
     text-decoration: line-through;
+    color: #c0c0c0;
 }
 
 .Icon {
@@ -53,7 +54,6 @@
 
 .Icon-delete {
     position: absolute;
-    top: -24px;
     right: 0;
 }
 

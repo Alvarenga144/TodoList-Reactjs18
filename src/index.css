@@ -1,6 +1,8 @@
 body {
   margin: 0;
-  display: grid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #FFFFFF;
   place-items: center;
   font-family: -apple-system, BlinkMacSystemFont, 'Sora', sans-serif;

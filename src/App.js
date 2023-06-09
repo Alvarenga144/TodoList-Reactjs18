@@ -18,7 +18,6 @@ function App() {
   return (
     <>
       <Title />
-      {/*<div className='main-container'>*/}
         <TodoCounter completed={10} total={20} />
         <TodoSearch />
         
@@ -31,8 +30,7 @@ function App() {
             />
           ))}
         </TodoList>
-      {/*</div>*/}
-      
+        
       <CreateTodoButton />
       
     </>
