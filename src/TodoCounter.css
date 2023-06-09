@@ -2,9 +2,10 @@
     font-size: 24px;
     font-weight: 400;
     text-align: center;
+    margin: 26px 0 24px 0;
 }
 
 .TodoCounter span {
-    font-weight: 400;
+    font-weight: 600;
     padding: 0px 4px;
 }

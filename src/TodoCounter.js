@@ -7,7 +7,7 @@ function TodoCounter({ total, completed }) {
             <span>{completed}</span> 
             de 
             <span>{total}</span> 
-            Tareas
+            tareas
         </p>
     );
 }

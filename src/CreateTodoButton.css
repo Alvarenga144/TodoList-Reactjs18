@@ -15,9 +15,18 @@
     align-items: center;
     height: 44px;
     padding: 0 18px;
-    transition: .3s;
+    transition: 0.3s;
+    z-index: 100;
 }
 
 .CreateTodoButton:hover {
+    bottom: 30px;
+    right: 30px;
+    box-shadow: 10px 10px 0px #002935;
+}
+
+/*
+.CreateTodoButton:hover {
     transform: rotate(360deg)
 }
+*/

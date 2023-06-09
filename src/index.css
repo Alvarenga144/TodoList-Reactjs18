@@ -3,7 +3,7 @@ body {
   display: grid;
   background-color: #FFFFFF;
   place-items: center;
-  font-family: -apple-system, BlinkMacSystemFont, 'Mukta', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Sora', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
