@@ -8,11 +8,11 @@ import { CreateTodoButton } from './CreateTodoButton';
 import './Apps.css'
 
 const defaultTodos = [
-  { text: 'Ordenar el cuarto', Completed: true},
-  { text: 'Finalizar Curso React', Completed: false},
-  { text: 'Estudiar Vocabulario', Completed: false},
-  { text: 'Comprar Frappuccino', Completed: false},
-  { text: 'Estados derivados', Completed: true},
+  { text: 'Ordenar el cuarto', Completed: true },
+  { text: 'Finalizar Curso React', Completed: false },
+  { text: 'Estudiar Vocabulario', Completed: false },
+  { text: 'Comprar Frappuccino', Completed: false },
+  { text: 'Estados derivados', Completed: true },
 ]
 
 function App() {
@@ -32,32 +32,50 @@ function App() {
     }
   )
 
-  console.log(searchValue);
+  const completaTodo = (text) => {
+    const newTodos = [...todos];
+    const todoIndex = newTodos.findIndex(
+      (todo) => todo.text == text
+    );
+    newTodos[todoIndex].Completed = true;
+    setTodos(newTodos);
+  };
+
+  const eliminaTodo = (text) => {
+    const newTodos = [...todos];
+    const todoIndex = newTodos.findIndex(
+      (todo) => todo.text == text
+    );
+    newTodos.splice(todoIndex, 1);
+    setTodos(newTodos);
+  }
 
   return (
     <>
       <Title />
-        <TodoCounter 
-          completed={completedTodos} 
-          total={totalTodos}
-        />
-        <TodoSearch 
-          searchValue={searchValue}
-          setSearchValue={setSearchValue}
-        />
-        
-        <TodoList>
-          {searchedTodos.map(todo => (
-            <TodoItem 
-              key={todo.text} 
-              text={todo.text} 
-              completed={todo.Completed} 
-            />
-          ))}
-        </TodoList>
-        
+      <TodoCounter
+        completed={completedTodos}
+        total={totalTodos}
+      />
+      <TodoSearch
+        searchValue={searchValue}
+        setSearchValue={setSearchValue}
+      />
+
+      <TodoList>
+        {searchedTodos.map(todo => (
+          <TodoItem
+            key={todo.text}
+            text={todo.text}
+            completed={todo.Completed}
+            onComplete={() => completaTodo(todo.text)}
+            onDelete={() => eliminaTodo(todo.text)}
+          />
+        ))}
+      </TodoList>
+
       <CreateTodoButton />
-      
+
     </>
   );
 }
