@@ -10,16 +10,33 @@ import './Apps.css'
 const defaultTodos = [
   { text: 'Ordenar el cuarto', Completed: true},
   { text: 'Finalizar Curso React', Completed: false},
-  { text: 'Estudiar Vocabulario', Completed: true},
+  { text: 'Estudiar Vocabulario', Completed: false},
   { text: 'Comprar Frappuccino', Completed: false},
+  { text: 'Estados derivados', Completed: true},
 ]
 
 function App() {
+  // Estado de para todos y counter todos
+  const [todos, setTodos] = React.useState(defaultTodos);
+  // Estado de input de busqueda
+  const [searchValue, setSearchValue] = React.useState('');
+
+  const completedTodos = todos.filter(todo => !!todo.Completed).length;
+  const totalTodos = todos.length;
+
+  console.log('Los usuarios buscan todos de ' + searchValue);
+
   return (
     <>
       <Title />
-        <TodoCounter completed={10} total={20} />
-        <TodoSearch />
+        <TodoCounter 
+          completed={completedTodos} 
+          total={totalTodos}
+        />
+        <TodoSearch 
+          searchValue={searchValue}
+          setSearchValue={setSearchValue}
+        />
         
         <TodoList>
           {defaultTodos.map(todo => (
