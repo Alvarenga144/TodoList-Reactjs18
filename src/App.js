@@ -15,23 +15,33 @@ import './Apps.css'
   { text: 'Estados derivados', Completed: true },
   ];
 
-  localStorage.setItem('TODOS_V1', JSON.stringify(defaultTodos));*/
+  localStorage.setItem(itemName, JSON.stringify(defaultTodos));*/
 
-function App() {
+function useLocalStorage(itemName, initialValue) {
   // LocalStorage
-  const localStorageTodos = localStorage.getItem('TODOS_V1');
+  const localStorageItems = localStorage.getItem(itemName);
+  let parsedItem;
 
-  let parsedTodos;
-
-  if (!localStorageTodos) {
-    localStorage.setItem('TODOS_V1', JSON.stringify([]));
-    parsedTodos = [];
+  if (!localStorageItems) {
+    localStorage.setItem(itemName, JSON.stringify(initialValue));
+    parsedItem = initialValue;
   } else {
-    parsedTodos = JSON.parse(localStorageTodos);
+    parsedItem = JSON.parse(localStorageItems);
   }
 
+  const [item, setItem] = React.useState(parsedItem);
+
+  const saveItem = (newItem) => {
+    localStorage.setItem(itemName, JSON.stringify(newItem))
+    setItem(newItem);
+  };
+
+  return [item, saveItem];
+}
+
+function App() {
   // Estado de para todos y counter todos
-  const [todos, setTodos] = React.useState(parsedTodos);
+  const [todos, saveTodos] = useLocalStorage('TODOS_V1', []);
   // Estado de input de busqueda
   const [searchValue, setSearchValue] = React.useState('');
 
@@ -46,27 +56,22 @@ function App() {
     }
   )
 
-  const saveTodos = (newTodos) => {
-    localStorage.setItem('TODOS_V1', JSON.stringify(newTodos))
-    setTodos(newTodos);
-  };
-
   const completaTodo = (text) => {
-    const newTodos = [...todos];
-    const todoIndex = newTodos.findIndex(
+    const newItem = [...todos];
+    const todoIndex = newItem.findIndex(
       (todo) => todo.text == text
     );
-    newTodos[todoIndex].Completed = true;
-    saveTodos(newTodos);
+    newItem[todoIndex].Completed = true;
+    saveTodos(newItem);
   };
 
   const eliminaTodo = (text) => {
-    const newTodos = [...todos];
-    const todoIndex = newTodos.findIndex(
+    const newItem = [...todos];
+    const todoIndex = newItem.findIndex(
       (todo) => todo.text == text
     );
-    newTodos.splice(todoIndex, 1);
-    saveTodos(newTodos);
+    newItem.splice(todoIndex, 1);
+    saveTodos(newItem);
   }
 
   return (
