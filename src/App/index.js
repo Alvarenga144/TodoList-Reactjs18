@@ -1,11 +1,7 @@
 import React from 'react';
-import { Title } from '../Title/index';
-import { TodoCounter } from '../TodoCounter/index';
-import { TodoSearch } from '../TodoSearch/index';
-import { TodoList } from '../TodoList/index';
-import { TodoItem } from '../TodoItem/index';
-import { CreateTodoButton } from '../CreateTodoButton/index';
+import { AppUi } from './AppUi/AppUi';
 import { useLocalStorage } from './useLocalStorage';
+
 
 /*const defaultTodos = [
   { text: 'Ordenar el cuarto', Completed: true },
@@ -54,33 +50,17 @@ function App() {
   }
 
   return (
-    <>
-      <Title />
-      <TodoCounter
-        completed={completedTodos}
-        total={totalTodos}
-      />
-      <TodoSearch
-        searchValue={searchValue}
-        setSearchValue={setSearchValue}
-      />
-
-      <TodoList>
-        {searchedTodos.map(todo => (
-          <TodoItem
-            key={todo.text}
-            text={todo.text}
-            completed={todo.Completed}
-            onComplete={() => completaTodo(todo.text)}
-            onDelete={() => eliminaTodo(todo.text)}
-          />
-        ))}
-      </TodoList>
-
-      <CreateTodoButton />
-
-    </>
+    <AppUi
+    completedTodos={completedTodos}
+    totalTodos={totalTodos}
+    searchValue={searchValue}
+    setSearchValue={setSearchValue}
+    searchedTodos={searchedTodos}
+    completaTodo={completaTodo}
+    eliminaTodo={eliminaTodo}
+    />
   );
+
 }
 
 export default App;
