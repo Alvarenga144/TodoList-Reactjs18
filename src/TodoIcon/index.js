@@ -9,8 +9,8 @@ const IconTypes = {
 }
 
 function TodoIcon({ type, color, onClick }) {
-    return(
-        <span 
+    return (
+        <span
             className={`Icon-container Icon-svg Icon-container-${type}`}
             onClick={onClick}
         >

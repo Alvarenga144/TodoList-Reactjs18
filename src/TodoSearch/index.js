@@ -5,7 +5,7 @@ function TodoSearch({
     searchValue,
     setSearchValue,
 }) {
-    return(
+    return (
         <input
             placeholder="Buscar tarea..."
             className="TodoSearch"
