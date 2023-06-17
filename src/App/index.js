@@ -40,6 +40,16 @@ function App() {
     saveTodos(newItem);
   };
 
+  //useEffect
+  console.log('Log 1');
+
+  React.useEffect(() => {
+    console.log('Log... 2');
+  }, [totalTodos]);
+
+  console.log('Log 3');
+
+
   const eliminaTodo = (text) => {
     const newItem = [...todos];
     const todoIndex = newItem.findIndex(
