@@ -16,7 +16,12 @@ import { useLocalStorage } from './useLocalStorage';
 
 function App() {
   // Estado de para todos y counter todos
-  const [todos, saveTodos] = useLocalStorage('TODOS_V1', []);
+  const {
+    item: todos, 
+    saveItem: saveTodos,
+    loading,
+    error,
+  } = useLocalStorage('TODOS_V1', []);
   // Estado de input de busqueda
   const [searchValue, setSearchValue] = React.useState('');
 
@@ -61,6 +66,8 @@ function App() {
 
   return (
     <AppUi
+    loading={loading}
+    error={error}
     completedTodos={completedTodos}
     totalTodos={totalTodos}
     searchValue={searchValue}
