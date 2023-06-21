@@ -5,6 +5,7 @@ import { TodoSearch } from '../../TodoSearch/index';
 import { TodoList } from '../../TodoList/index';
 import { TodoItem } from '../../TodoItem/index';
 import { CreateTodoButton } from '../../CreateTodoButton/index';
+import { Footer} from '../../Footer/index';
 
 function AppUi(
     {
@@ -48,7 +49,7 @@ function AppUi(
             </TodoList>
 
             <CreateTodoButton />
-
+            <Footer />
         </>
     );
 }
