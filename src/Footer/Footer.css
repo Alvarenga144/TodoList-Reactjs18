@@ -1,0 +1,13 @@
+.futercito {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 0;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.futercito a {
+    margin-left: 4px;
+    text-decoration: underline;
+    color: #000000;
+}
