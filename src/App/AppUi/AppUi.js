@@ -4,6 +4,9 @@ import { TodoCounter } from '../../TodoCounter/index';
 import { TodoSearch } from '../../TodoSearch/index';
 import { TodoList } from '../../TodoList/index';
 import { TodoItem } from '../../TodoItem/index';
+import { TodosLoading } from '../../TodosLoading/index';
+import { TodosError } from '../../TodosError/index';
+import { EmptyTodos } from '../../EmptyTodos/index';
 import { CreateTodoButton } from '../../CreateTodoButton/index';
 import { Footer} from '../../Footer/index';
 
@@ -33,9 +36,9 @@ function AppUi(
             />
 
             <TodoList>
-                {loading ? <> <p>Cargando...</p> </> : null }
-                {error ? <> <p>Whoops!! Parece que algo salió mal.</p> </> : null }
-                {!loading && searchedTodos.length === 0 ? <> <p>Crea tu primer TODO!</p> </> : null}
+                {loading ? <TodosLoading /> : null }
+                {error ? <TodosError /> : null }
+                {!loading && searchedTodos.length === 0 ? <EmptyTodos /> : null}
 
                 {searchedTodos.map(todo => (
                     <TodoItem

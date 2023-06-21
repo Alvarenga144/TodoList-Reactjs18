@@ -1,0 +1,27 @@
+.Todoloading {
+    background-color: pink;
+    height: 80px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+    border-radius: 8px;
+    transition: 0.2s;
+
+    background: linear-gradient(90deg, #ffffff, #8f8f8f);
+    background-size: 500% 500%;
+    animation: loadingAnimation 3s ease-in-out infinite;
+}
+
+@keyframes loadingAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
