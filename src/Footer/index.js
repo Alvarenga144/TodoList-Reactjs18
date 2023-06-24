@@ -5,7 +5,7 @@ function Footer() {
     return (
         <p className="futercito">
             Made with ♥️ by 
-            <a href="https://linktr.ee/Alvarenga144" target="_blank">Esteban Alvarenga</a>
+            <a href="https://linktr.ee/Alvarenga144" >Esteban Alvarenga</a>
         </p>
     );
 }
