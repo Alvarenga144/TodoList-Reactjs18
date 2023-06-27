@@ -10,6 +10,7 @@ import { EmptyTodos } from '../../EmptyTodos/index';
 import { CreateTodoButton } from '../../CreateTodoButton/index';
 import { Footer } from '../../Footer/index';
 import { Modal } from '../../Modal';
+import { TodoForm } from '../../TodoForm';
 import { TodoContext } from '../../TodoContext';
 
 function AppUi() {
@@ -20,7 +21,6 @@ function AppUi() {
         completeTodo,
         deleteTodo,
         openModal,
-        setOpenModal,
     } = React.useContext(TodoContext);
     return (
         <>
@@ -52,7 +52,7 @@ function AppUi() {
             <CreateTodoButton />
             {openModal && (
                 <Modal>
-                    Agregar TODO
+                    <TodoForm />
                 </Modal>
             )}
             <Footer />
