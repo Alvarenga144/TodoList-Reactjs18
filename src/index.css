@@ -3,11 +3,17 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #FFFFFF;
   place-items: center;
   font-family: -apple-system, BlinkMacSystemFont, 'Sora', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: radial-gradient(circle at 50% 125%,
+      #6fc104 10%,
+      #fffb0080 25%,
+      #d92e7f50 58%,
+      #9b36b775 76%,
+      #00539995
+  );
 }
 
 code {

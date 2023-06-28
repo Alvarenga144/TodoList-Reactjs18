@@ -1,9 +1,12 @@
 import React from "react";
-//import './EmptyTodos.css';
+import './EmptyTodo.css';
 
 function EmptyTodos() {
     return(
-        <p>Crea tu primer Todo...</p>
+        <div className="emptyContainer">
+            <p className="emptyTodo">¡Whoops! Parece que aún no hay Tareas,</p>
+            <p className="emptyTodo">¡Crea tu primer Tarea!</p>
+        </div>
     );
 }
 

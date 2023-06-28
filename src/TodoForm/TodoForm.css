@@ -1,12 +1,16 @@
 form {
     width: 90%;
     max-width: 300px;
-    background-color: #fff;
+    background-color: #ffffff;
     padding: 33px 40px;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column
+    flex-direction: column;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    transition: 0.2s;
+    box-shadow: 30px 30px 0px #000000;
 }
 
 label {
@@ -14,30 +18,32 @@ label {
     font-weight: 700;
     font-size: 20px;
     color: #1e1e1f;
-    margin-bottom: 26px
+    margin-bottom: 26px;
+    font-family: 'Sora';
 }
 
 textarea {
     background-color: #f9fbfc;
-    border: 2px solid #202329;
-    border-radius: 2px;
-    box-shadow: 0 5px 50px rgba(32, 35, 41, .25);
+    border: 2px solid #000000;
+    border-radius: 8px;
+    /*box-shadow: 0 5px 50px rgba(32, 35, 41, .25);*/
     color: #1e1e1f;
-    font-size: 20px;
+    font-size: 18px;
+    font-family: 'Sora';
     text-align: center;
     padding: 12px;
     height: 96px;
-    width: calc(100% - 25px)
+    width: calc(100% - 25px);
 }
 
 textarea::placeholder {
     color: #a5a5a5;
-    font-family: montserrat;
+    font-family: 'Sora';
     font-weight: 400
 }
 
 textarea:focus {
-    outline-color: #61dafa
+    outline-color: #000000
 }
 
 .TodoForm-buttonContainer {
@@ -56,16 +62,30 @@ textarea:focus {
     font-weight: 400;
     width: 120px;
     height: 48px;
-    border-radius: 2px;
-    border: none;
-    font-family: montserrat
+    border: 2px solid #000000;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.TodoForm-button:hover {
+    box-shadow: 10px 10px 0px #002935;
+    margin-top: -6px;
 }
 
 .TodoForm-button--add {
     background: #61dafa;
-    box-shadow: 0 5px 25px rgba(97, 218, 250, .5)
+    /*box-shadow: 0 5px 25px rgba(97, 218, 250, .5)*/
+}
+
+.TodoForm-button--add:hover {
+    box-shadow: 10px 10px 0px #002935;
+
 }
 
 .TodoForm-button--cancel {
-    background: 0 0
+    background: #ff8684;
+}
+
+.TodoForm-button--cancel:hover {
+    box-shadow: 10px 10px 0px #bb0300;
 }

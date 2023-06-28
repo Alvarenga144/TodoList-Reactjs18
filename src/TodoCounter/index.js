@@ -9,9 +9,15 @@ function TodoCounter() {
     } = React.useContext(TodoContext);
 
     return (
+        totalTodos <= 0 ? 
+            <p className='TodoCounter'>
+                Aún no has completado tareas
+            </p>
+        :
         totalTodos === completedTodos ?
             <p className='TodoCounter'>
-                ¡¡Completaste todas las tareas 🥳🎖️!!
+                ¡¡Felicidades!! 🥳🎖️ <br />
+                Completaste todas las tareas.
             </p>
             :
             <p className='TodoCounter'>
