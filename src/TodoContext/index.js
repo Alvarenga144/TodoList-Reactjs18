@@ -9,7 +9,7 @@ function TodoProvider({ children }) {
         saveItem: saveTodos,
         loading,
         error,
-    } = useLocalStorage('TODOS_V1', []);
+    } = useLocalStorage('TODOLIST_V1_ALVARENGA144', []);
     const [searchValue, setSearchValue] = React.useState('');
     const [openModal, setOpenModal] = React.useState(false);
 

@@ -1,5 +1,4 @@
 .Modal {
-    background: rgba(23, 25, 29, 0.8);
     position: fixed;
     top: -10px;
     left: -10px;
@@ -8,5 +7,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    background: radial-gradient(circle at 50% 125%,
+      #6fc104 10%,
+      #fffb00 25%,
+      #d92e7f 58%,
+      #9b36b7 76%,
+      #005399
+    );
+    transition: 0.6s;
 }
