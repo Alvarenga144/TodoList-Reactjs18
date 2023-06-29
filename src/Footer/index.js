@@ -2,7 +2,6 @@ import React from "react";
 import './Footer.css';
 //import { ReactComponent as SocialMedia } from '../../public/arrow-right-up-358-svgrepo-com.svg';
 
-
 function Footer() {
     return (
         <p className="futercito">

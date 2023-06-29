@@ -1,12 +1,23 @@
-# Repositorio base del Curso de Introducción a React.js en Platzi
+# TODO list / Lista de Tareas con React.js
 
-¡Hola, Platzinauta!
+¡Hola! Este es el repositorio de TODO List App. Este proyecto fue creado con la guia principal y desarrollo del [Curso de Introducción a React.js](https://platzi.com/reactjs) de Platzi.
+La rama principal contiene el código con el que empezamos el curso y debido a que es un proyecto personal únicamente decidí utilizar la rama main, pero también esta la rama gh-pages, para el deploy de la aplicación.
 
-En este repositorio encontrarás el código de todas las clases del [Curso de Introducción a React.js](https://platzi.com/reactjs). Para empezar solo debes clonar este repositorio (`git clone`), instalar sus dependencias (`npm i`) y ejecutar la aplicación (`npm start`).
+[<code><img alt="introducing" src="./public/assets/ReactTodoListTerminada.gif"></code>](https://alvarenga144.github.io/TodoList-Reactjs18/)
 
-La rama principal contiene el código con el que eempezamos el curso. En las demás ramas encontrarás el código de las siguientes clases y finalmente el deploy de la aplicación.
+La aplicación está hecha en su totalidad con React.js, inicializada usando [Create React App](https://github.com/facebook/create-react-app).
+La app simula un CRUD utilizando LocalStorage del navegador, en lugar de una base de datos. Mantiene una buena persistencia de datos, mientras no se limpie los datos del navegador. Los estilos son totalmente creados y de mi invención, mostrando un diseño animado, juguetón y moderno a la vez. 
+Para los estilos se útilizó úniamente CSS para los componenentes, los cuales tienen la sintaxis .JSX.
 
-¡Mucha suerte aprendiendo React! #NuncaParesDeAprender
+Puedes probar la aplicación en linea [AQUI.](https://alvarenga144.github.io/TodoList-Reactjs18/)
+
+## Puedes clonar este repositorio, e instalarlo local
+
+Para empezar solo debes clonar este repositorio (`git clone`), instalar sus dependencias (`npm i`) y ejecutar la aplicación (`npm start`).
+
+<hr>
+
+# React Documentation
 
 ## Getting Started with Create React App
 
