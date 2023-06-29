@@ -1,23 +1,23 @@
-# TODO list / Lista de Tareas con React.js
+# TODO list / Lista de Tareas con React.js ⚛️
 
 ¡Hola! Este es el repositorio de TODO List App. Este proyecto fue creado con la guia principal y desarrollo del [Curso de Introducción a React.js](https://platzi.com/reactjs) de Platzi.
 La rama principal contiene el código con el que empezamos el curso y debido a que es un proyecto personal únicamente decidí utilizar la rama main, pero también esta la rama gh-pages, para el deploy de la aplicación.
 
-[<code><img alt="introducing" src="./public/assets/ReactTodoListTerminada.gif"></code>](https://alvarenga144.github.io/TodoList-Reactjs18/)
+<img alt="introducing" src="./public/assets/ReactTodoListTerminada.gif">
+
+**➡️ Puedes probar la [aplicación en line aquí.](https://alvarenga144.github.io/TodoList-Reactjs18/)**
 
 La aplicación está hecha en su totalidad con React.js, inicializada usando [Create React App](https://github.com/facebook/create-react-app).
 La app simula un CRUD utilizando LocalStorage del navegador, en lugar de una base de datos. Mantiene una buena persistencia de datos, mientras no se limpie los datos del navegador. Los estilos son totalmente creados y de mi invención, mostrando un diseño animado, juguetón y moderno a la vez. 
 Para los estilos se útilizó úniamente CSS para los componenentes, los cuales tienen la sintaxis .JSX.
 
-Puedes probar la aplicación en linea [AQUI.](https://alvarenga144.github.io/TodoList-Reactjs18/)
-
-## Puedes clonar este repositorio, e instalarlo local
+## Puedes clonar este repositorio, e instalarlo local ✅🫡
 
 Para empezar solo debes clonar este repositorio (`git clone`), instalar sus dependencias (`npm i`) y ejecutar la aplicación (`npm start`).
 
 <hr>
 
-# React Documentation
+# React Documentation ⬇️
 
 ## Getting Started with Create React App
 
