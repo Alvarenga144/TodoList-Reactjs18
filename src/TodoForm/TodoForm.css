@@ -71,7 +71,6 @@ textarea:focus {
 }
 
 .TodoForm-button:hover {
-    box-shadow: 10px 10px 0px #002935;
     margin-top: -6px;
     color: #ffffff;
     font-weight: 600;
@@ -82,15 +81,22 @@ textarea:focus {
     /*box-shadow: 0 5px 25px rgba(97, 218, 250, .5)*/
 }
 
+.TodoForm-button--add:hover {
+    margin-top: -6px;
+    background: #61dafa;
+    box-shadow: 10px 10px 0px #002935;
+}
+
 .disabled {
     color: #6b6b6b;
     background: #255461;
-    /*box-shadow: 0 5px 25px rgba(97, 218, 250, .5)*/
 }
 
-.TodoForm-button--add:hover {
-    box-shadow: 10px 10px 0px #002935;
-
+.disabled:hover {
+    color: #6b6b6b;
+    margin-top: 0;
+    background: #255461;
+    box-shadow: 0px 0px 0px;
 }
 
 .TodoForm-button--cancel {

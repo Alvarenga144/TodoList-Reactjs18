@@ -21,6 +21,7 @@ function AppUi() {
         completeTodo,
         deleteTodo,
         openModal,
+        validatting,
     } = React.useContext(TodoContext);
     return (
         <>
@@ -52,7 +53,9 @@ function AppUi() {
             <CreateTodoButton />
             {openModal && (
                 <Modal>
-                    <TodoForm />
+                    <TodoForm
+                        validatting={validatting}
+                    />
                 </Modal>
             )}
             <Footer />

@@ -13,16 +13,22 @@ function TodoProvider({ children }) {
     const [searchValue, setSearchValue] = React.useState('');
     const [newTodoValue, setNewTodoValue] = React.useState('');
     const [openModal, setOpenModal] = React.useState(false);
+    const [validSatus, setValidSatus] = React.useState(false);
+
 
     const validatting = (text) => {
-        const resultInput = todos.filter(
-            (todo) => {
-                const todoText = todo.text.toLowerCase();
-                const searchText = newTodoValue.toLowerCase();
-                return (todoText === searchText);
-            }
+        const newTodos = [...todos];
+        const todoIndex = newTodos.findIndex(
+            (todo) => todo.text === text
         );
-        console.log(text);
+
+        if (todoIndex !== -1) {
+            setValidSatus(!validSatus);
+            //console.log('iguales');
+            alert('Ya existe esa tarea');
+            setNewTodoValue('');
+            //setOpenModal(!openModal);
+        }
     }
 
     const completedTodos = todos.filter(
@@ -46,6 +52,7 @@ function TodoProvider({ children }) {
             completed: false,
         })
         saveTodos(newTodos);
+        setNewTodoValue('');
     };
 
     const completeTodo = (text) => {
@@ -83,6 +90,8 @@ function TodoProvider({ children }) {
             openModal,
             setOpenModal,
             validatting,
+            validSatus,
+            setValidSatus,
         }}>
             {children}
         </TodoContext.Provider>
@@ -90,17 +99,3 @@ function TodoProvider({ children }) {
 }
 
 export { TodoContext, TodoProvider };
-
-/*
-
-const filtradoExistente = newTodos.filter(
-            (todo) => {
-                if (todo.text === text) {
-                    console.log(`Ya existe: ${todo.text}`);
-                } else {
-                    console.log('disponible');
-                }
-            }
-        );
-
-*/
