@@ -82,6 +82,12 @@ textarea:focus {
     /*box-shadow: 0 5px 25px rgba(97, 218, 250, .5)*/
 }
 
+.disabled {
+    color: #6b6b6b;
+    background: #255461;
+    /*box-shadow: 0 5px 25px rgba(97, 218, 250, .5)*/
+}
+
 .TodoForm-button--add:hover {
     box-shadow: 10px 10px 0px #002935;
 

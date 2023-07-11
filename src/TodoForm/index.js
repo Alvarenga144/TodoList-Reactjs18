@@ -4,23 +4,24 @@ import './TodoForm.css';
 
 function TodoForm() {
     const {
+        newTodoValue,
+        setNewTodoValue,
         addTodo,
         setOpenModal,
+        validatting,
     } = React.useContext(TodoContext);
-    const [newTodoValue, setNewTodoValue] = React.useState('');
+    
+    const isDescriptionValid = (newTodoValue.length > 1 ) ? true : false;
 
     const onSubmit = (event) => {
         event.preventDefault();
-        addTodo(newTodoValue);
+        if(!isDescriptionValid) return;
+        addTodo(newTodoValue.trim());
         setOpenModal(false);
     }
 
     const onCancel = () => {
         setOpenModal(false);
-    }
-
-    const onChange = (event) => {
-        setNewTodoValue(event.target.value);
     }
 
     return (
@@ -29,7 +30,11 @@ function TodoForm() {
             <textarea
                 placeholder="Ej. Estudiar Inglés"
                 value={newTodoValue}
-                onChange={onChange}
+                onChange={(event) => {
+                    validatting(newTodoValue);
+                    setNewTodoValue(event.target.value)
+                    
+                }}
                 required
             />
             <div className="TodoForm-buttonContainer">
@@ -40,8 +45,10 @@ function TodoForm() {
                     Cancelar
                 </button>
                 <button 
-                    type="submit" 
-                    className="TodoForm-button TodoForm-button--add" >
+                    className={`TodoForm-button TodoForm-button--add ${isDescriptionValid ? '' : 'disabled'}`}
+                    type="submit"
+                    disabled={ !isDescriptionValid }
+                >
                     Agregar
                 </button>
             </div>

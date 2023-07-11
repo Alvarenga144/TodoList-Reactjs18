@@ -11,7 +11,19 @@ function TodoProvider({ children }) {
         error,
     } = useLocalStorage('TODOLIST_V1_ALVARENGA144', []);
     const [searchValue, setSearchValue] = React.useState('');
+    const [newTodoValue, setNewTodoValue] = React.useState('');
     const [openModal, setOpenModal] = React.useState(false);
+
+    const validatting = (text) => {
+        const resultInput = todos.filter(
+            (todo) => {
+                const todoText = todo.text.toLowerCase();
+                const searchText = newTodoValue.toLowerCase();
+                return (todoText === searchText);
+            }
+        );
+        console.log(text);
+    }
 
     const completedTodos = todos.filter(
         todo => !!todo.completed
@@ -22,6 +34,7 @@ function TodoProvider({ children }) {
         (todo) => {
             const todoText = todo.text.toLowerCase();
             const searchText = searchValue.toLowerCase();
+            //console.log(searchText);
             return todoText.includes(searchText);
         }
     );
@@ -61,16 +74,33 @@ function TodoProvider({ children }) {
             totalTodos,
             searchValue,
             setSearchValue,
+            newTodoValue,
+            setNewTodoValue,
             searchedTodos,
             addTodo,
             completeTodo,
             deleteTodo,
             openModal,
             setOpenModal,
+            validatting,
         }}>
-            { children }
+            {children}
         </TodoContext.Provider>
     );
 }
 
 export { TodoContext, TodoProvider };
+
+/*
+
+const filtradoExistente = newTodos.filter(
+            (todo) => {
+                if (todo.text === text) {
+                    console.log(`Ya existe: ${todo.text}`);
+                } else {
+                    console.log('disponible');
+                }
+            }
+        );
+
+*/
