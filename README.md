@@ -5,7 +5,7 @@ La rama principal contiene el código con el que empezamos el curso y debido a q
 
 <img alt="introducing" src="./public/assets/ReactTodoListTerminada.gif">
 
-**➡️ Puedes probar la [aplicación en line aquí.](https://alvarenga144.github.io/TodoList-Reactjs18/)**
+**➡️ Puedes probar la [aplicación aquí.](https://alvarenga144.github.io/TodoList-Reactjs18/)**
 
 La aplicación está hecha en su totalidad con React.js, inicializada usando [Create React App](https://github.com/facebook/create-react-app).
 La app simula un CRUD utilizando LocalStorage del navegador, en lugar de una base de datos. Mantiene una buena persistencia de datos, mientras no se limpie los datos del navegador. Los estilos son totalmente creados y de mi invención, mostrando un diseño animado, juguetón y moderno a la vez. 
